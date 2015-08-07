@@ -2,3 +2,5 @@
 
 
 echo phpinfo();
+
+echo '123';
