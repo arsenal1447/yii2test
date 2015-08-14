@@ -2,15 +2,20 @@
 namespace backend\controllers;
 
 use Yii;
-use yii\filters\AccessControl;
-use yii\web\Controller;
-use common\models\LoginForm;
+use common\models\AuthItem;
+use common\models\search\AuthItemSearch;
+use base\BaseController;
+use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;
+use yii\rbac\Item;
+use base\YiiForum;
+use yii\rbac\Role;
+use yii\rbac\Permission;
 
 /**
- * Site controller
+ * Role controller
  */
-class SiteController extends Controller
+class RoleController extends AuthController
 {
     /**
      * @inheritdoc

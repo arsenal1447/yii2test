@@ -35,14 +35,17 @@ AppAsset::register($this);
         ],
     ]);
     $menuItems = [
-        ['label' => 'Home', 'url' => ['/site/index']],
-        ['label' => 'Home', 'url' => ['/site/index']],
-        ['label' => 'Home', 'url' => ['/site/index']],
-        ['label' => 'Home', 'url' => ['/site/index']],
-        ['label' => 'Home', 'url' => ['/site/index']],
+        ['label' => '首页', 'url' => ['/site/index']],
+        ['label' => '模块', 'url' => ['/board/index']],
+        ['label' => '用户', 'url' => ['/user/index']],
+        ['label' => '角色', 'url' => ['/role/index']],
+        ['label' => '权限', 'url' => ['/permission/index']],
+        ['label' => '关于', 'url' => ['/site/about']],
+        ['label' => '联系', 'url' => ['/site/contact']],
     ];
     if (Yii::$app->user->isGuest) {
-        $menuItems[] = ['label' => 'Login', 'url' => ['/site/login']];
+        $menuItems[] = ['label' => '注册', 'url' => ['/site/signup']];
+        $menuItems[] = ['label' => '登录', 'url' => ['/site/login']];
     } else {
         $menuItems[] = [
             'label' => 'Logout (' . Yii::$app->user->identity->username . ')',
